@@ -1,0 +1,13 @@
+<?php
+// task is to display list of client IP addresses sorted by count of requests descending
+$logLines = fopen("/logs/access.log", "r");
+
+if ($logLines) {
+    while (($line = fgets($logLines)) !== false) {
+        echo str_replace("HTTP", "Beti", $line)  . "<br><br>";
+    }
+    fclose($logLines);
+}
+
+
+

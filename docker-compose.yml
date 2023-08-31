@@ -7,8 +7,8 @@ services:
         image: nginx:latest
         # маршрутизируем порты
         ports:
-            - "80:80"
-            - "443:443"
+            - "80:80"   # http
+            - "443:443" # https
         # монтируем директории, слева директории на основной машине, справа - куда они монтируются в контейнере
         volumes:
             - ./hosts:/etc/nginx/conf.d
@@ -26,6 +26,7 @@ services:
         # монтируем директорию с проектами
         volumes:
             - ./www:/var/www
+            - ./logs:/logs
     mysql:
         image: mysql:8
         ports:
