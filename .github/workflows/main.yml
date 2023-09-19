@@ -4,6 +4,5 @@ on:
   pull_request:
     branches: [ "main" ]  
 jobs:
-  run_pull:
-    name: run pull
-      uses: actions/checkout@v3
+  name: run pull
+    uses: actions/checkout@v3
