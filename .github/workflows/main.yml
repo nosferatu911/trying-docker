@@ -1,8 +1,0 @@
-on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]  
-jobs:
-  - name: Checkout
-    uses: actions/checkout@v3
