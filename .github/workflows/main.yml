@@ -15,8 +15,8 @@ jobs:
       docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
   -name: docker build php
     run: |
-      docker build ./images/php -t nosferatu911/trying-docker:1.0.0
+      docker build ./images/php -t nosferatu911/trying-docker:1
   -name docker push
     run: |
-      docker push nosferatu911/trying-docker:1.0.0
+      docker push nosferatu911/trying-docker:1
 
