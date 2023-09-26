@@ -16,6 +16,9 @@ jobs:
     - name: docker build php
       run: |
         docker build ./images/php -t nosferatu911/php:1.0.0
+      run: |
+        docker build nginx:latest -t nosferatu911/nginx:latest
     - name: docker push
       run: |
         docker push nosferatu911/php:1.0.0
+        docker push nosferatu911/nginx:latest
